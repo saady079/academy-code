@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "arad";
+  src: url(../../fonts/AradVF.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  border-radius: 50%;
+  background: radial-gradient(ellipse 70% 90%, rgb(66, 236, 193), #19191d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: arad;
+}
+.mybox {
+  width: 400px;
+  height: 460px;
+  background-color: rgb(232, 255, 24, 0.6);
+  border-radius: 10px;
+  box-shadow: 1px -1px 6px 0 #19191d;
+  display: flex;
+  flex-direction: column;  
+  padding-top: 40px;
+  text-align: center;
+}
+.bkLimit{
+  background-color: rgb(255, 0, 64);
+}
+.mb-title {
+  letter-spacing: 1px;
+}
+.mb-number {  
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 150px;
+  opacity: 0.9;
+  height: 44%;  
+}
+.mybox > button {
+  all: unset;
+}
+.iconReset {
+  opacity: 0.6;
+  font-size: 20px;
+  transition: all 0.3s ease-in;
+}
+.iconReset:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  animation: dour 6s infinite;
+}
+@keyframes dour {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.mb-power {
+  height: 70px;
+  margin-top: auto;
+  background-color: #19191d;
+  width: 100%;
+  /* display: grid; */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* grid-template-columns: repeat(2, 1fr); */
+  display: flex;
+}
+.buttons {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons:hover{
+  cursor: pointer;
+  background-color: #131318;
+}
+.buttons:first-child{
+  border-right: 0.3px solid rgb(232, 255, 24, 0.6);
+  border-bottom-left-radius: 10px;
+}
+.buttons:last-child{
+  border-bottom-right-radius: 10px;
+}
+.icons {
+  color: rgb(232, 255, 24, 0.6);
+  font-size: 30px;
+}
+@media screen and (max-width:500px) {
+  .mybox{
+    width: 100%;
+    height: 100%;    
+    padding-top: 90px;
+  }
+}

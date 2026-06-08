@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "saady";
+  src: url(../../fonts/AradVF.ttf) format(truetype);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --borderAlpha: 1px solid rgb(196, 196, 196);
+}
+body {
+  height: 100vh;
+  font-family: saady, sans-serif;
+  background-color: #b9b9b9;
+  overflow: hidden;
+}
+
+header {
+  height: 200px;
+  background:
+    linear-gradient(90deg, rgb(45, 58, 247), rgb(255, 0, 106)),
+    url(../../pic/clouds-twilight-times.jpg) top right;
+  background-blend-mode: multiply;
+  text-align: center;
+  padding-top: 30px;
+  box-shadow: 0 2px 7px black;
+  z-index: -1;
+}
+.x-topic {
+  text-shadow: 0 -1.5px 3px rgb(7, 7, 12);
+  font-size: 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: snow;
+}
+.x-topicUni {
+  font-weight: 500;
+  opacity: 0.66;
+}
+.s-topic {
+  font-size: 19px;
+  color: rgb(204, 216, 33);
+}
+
+.analizBox {
+  margin-top: -10px;
+  width: 800px;
+  height: 400px;
+  background-color: snow;
+  display: flex;
+  justify-self: center;
+  border-radius: 10px;
+}
+textarea {
+  all: unset;
+}
+.txtarea {
+  resize: none;
+  flex-grow: 1;
+  padding: 20px 30px;
+  font-size: 20px;
+}
+.txtarea::placeholder {
+  font-weight: 500;
+  opacity: 0.5;
+}
+.statu {
+  /*2) flex: 1.4;
+  display: flex;
+  flex-wrap: wrap; */
+  flex-grow: 0.7;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: rgb(233, 233, 233);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.statues {
+  /*2) flex: 1 150px; */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(73, 39, 53);
+}
+.statues:nth-child(1),
+.statues:nth-child(2) {
+  border-bottom: var(--borderAlpha);
+}
+.statues:nth-child(4),
+.statues:nth-child(2) {
+  border-left: var(--borderAlpha);
+}
+.statues span {
+  font-size: 24px;  
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.statues h3 {
+  font-size: 11px;
+  color: rgb(95, 93, 94, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.limitStyle{
+  color: red;   
+}
+
+footer {
+  width: 800px;
+  display: flex;
+  justify-self: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  opacity: 0.4;
+}
+
+@media (max-width: 830px) {
+  .x-topic {
+    font-size: 6.6vw;
+  }
+
+  .analizBox {
+    width: 85vw;
+    flex-direction: column;
+  }
+  .txtarea::placeholder {
+    font-size: 17px;
+    opacity: 0.5;
+  }
+  .statues:nth-child(1),
+  .statues:nth-child(2),
+  .statues:nth-child(4) {
+    border: none;
+  }
+  .statues span {
+    font-size: 20px;
+  }
+  .statu {
+    border-bottom-left-radius: 10px;
+    flex-grow: 0.5;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
