@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myBio</title>
+    <style>
+      body {
+        background-image: linear-gradient(rgb(202, 238, 0),rgb(76, 106, 243));
+        height: 100vh;
+        display: flex;      
+        justify-content: center;     
+        align-items: center;
+      }
+      .bio {
+        width: 400px;
+        background-color: rosybrown;
+        box-shadow: -1px -1px 2px 0 rgb(114, 112, 112),-1px 1px 3px 0 rgb(0, 0, 0);
+        border-radius: 8px;        
+        text-align: center;
+        padding: 45px 0;
+        box-sizing: border-box;
+        font-family: AradFDVF,sans-serif;
+      }
+      #user {
+        width: 130px;
+        border-radius: 50%;
+        display: block;
+        margin: auto;
+      }
+      .bio h2{
+        border-bottom: 2px solid rgb(208, 216, 177);
+        display: inline-block;        
+      }      
+      p{
+        margin-top: 0;
+        font-family: Lalezar,sans-serif;
+        font-variant: small-caps;
+        font-size: large;
+      }
+      .contact{  
+        background-color: rgb(0, 65, 65);
+      }
+      .contact img{
+        width: 40px;
+        margin: 5px 2px 0;        
+        border-radius: 100%;
+        background-color: rgb(208, 216, 177);
+      }
+      .contact img:hover{        
+        background-color: rosybrown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bio">
+      <img src="../../images/saady.jpg" id="user" alt="" />
+      <h2>Ahmad Sadabadi</h2>
+      <p>here is my work page about a front-end developer</p>
+      <div class="contact">
+        <img src="../../images/youtube.png" alt="" />
+        <img src="../../images/facebook.png" alt="" />
+        <img src="../../images/instagram.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

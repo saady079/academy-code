@@ -1,0 +1,56 @@
+      @font-face {
+        font-family: "dirooz";
+        src: url(../../fonts/Dirooz.ttf) format(truetype);
+      }
+      * {
+        font-family: dirooz, sans-serif;
+        box-sizing: border-box;
+      }
+      img{
+        width: 90px;
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+      }
+      body {
+        height: 100vh;
+        background-color: forestgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box_form {
+        border-radius: 6px;
+        background-color: snow;
+        width: 430px;
+        padding: 30px;
+      }
+      .data input,
+      .box_form button {
+        width: 100%;
+        padding: 6px 10px;
+        border-radius: 3px;
+        background-color: rgb(219, 219, 219);
+      }
+      label {
+        font-weight: bold;
+        font-size: 14px;
+      }
+      .data input,
+      .data {
+        margin: 5px 0 7px;
+      }
+      input,
+      button {
+        border: 0;
+        outline: 0;
+      }
+      .box_form button {
+        background-color: royalblue;
+        font-weight: bold;
+        color: snow;
+        transition: 0.5s all ease-in-out;
+      }
+      .box_form button:active {
+        transform: scale(0.9);
+      }
