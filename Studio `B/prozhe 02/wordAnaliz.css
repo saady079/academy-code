@@ -20,10 +20,7 @@ body {
 
 header {
   height: 200px;
-  background:
-    linear-gradient(90deg, rgb(45, 58, 247), rgb(255, 0, 106)),
-    url(../../pic/clouds-twilight-times.jpg) top right;
-  background-blend-mode: multiply;
+  background: linear-gradient(90deg, rgb(33, 48, 248), rgb(228, 0, 95));
   text-align: center;
   padding-top: 30px;
   box-shadow: 0 2px 7px black;
@@ -95,7 +92,7 @@ textarea {
   border-left: var(--borderAlpha);
 }
 .statues span {
-  font-size: 24px;  
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 3px;
 }
@@ -105,8 +102,8 @@ textarea {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.limitStyle{
-  color: red;   
+.limitStyle {
+  color: red;
 }
 
 footer {
