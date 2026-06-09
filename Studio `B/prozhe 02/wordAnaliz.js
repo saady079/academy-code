@@ -19,16 +19,13 @@ const inputControl = function () {
     valOfWord = 0;
   }
 
-  if (valOfTwit < 0) {
-    number_twitEl.classList.add("limitStyle");
-  } else {
+  valOfTwit < 0 ?
+    number_twitEl.classList.add("limitStyle") :
     number_twitEl.classList.remove("limitStyle");
-  }
-  if (valOfFace < 0) {
-    number_faceEl.classList.add("limitStyle");
-  } else {
+
+  valOfFace < 0 ?
+    number_faceEl.classList.add("limitStyle") :
     number_faceEl.classList.remove("limitStyle");
-  }
 
   number_charEl.textContent = valOfChar;
   number_twitEl.textContent = valOfTwit;
@@ -36,5 +33,4 @@ const inputControl = function () {
   number_wordEl.textContent = valOfWord;
 };
 
-
-commentEl.addEventListener("input",inputControl);
+commentEl.addEventListener("input", inputControl);
