@@ -76,7 +76,7 @@ const submitOpera = (event) => {
   }
   toFixedComment(feedBacks);
 
-  const hashtags = {hashtag: hashtag,}
+  const hashtags = { hashtag: hashtag, }
   toFixedHashtag(hashtags);
 
   fetch(`${baseUrl}/feedbacks`, {
@@ -98,16 +98,6 @@ const submitOpera = (event) => {
   textareaEl.value = "";
   submit_btnEl.blur();
   loadingEl.remove('spinner');
-
-  // const upvoteCountEl = document.querySelector(".upvote__count");
-  // const upvoteEl = document.querySelector(".upvote");
-
-  // upvoteEl.addEventListener("click", () => {    
-  //   const upvContect = upvoteCountEl.textContent;
-  //   const convert_upv = Number(upvContect);
-  //   const upvOpera = convert_upv + 1;
-  //   upvoteCountEl.textContent = upvOpera;
-  // });
 };
 
 const showValidate = (textCheck) => {
@@ -121,6 +111,7 @@ const showValidate = (textCheck) => {
 formEl.addEventListener("submit", submitOpera);
 // -- END form component --
 
+
 fetch(`${baseUrl}/feedbacks`)
   .then(response => {
     return response.json();
@@ -133,20 +124,39 @@ fetch(`${baseUrl}/feedbacks`)
     feedsOl.textContent = `faild to fetch web server; message error:${err}`;
   })
 
-const clickHandler = event => {
+
+const clickHandlerFBs = event => {
   const eventLi = event.target;
   const upvoteEl = eventLi.className.includes('upvote');
   if (upvoteEl) {
     const upvoteBtn = eventLi.closest('.upvote');
-    // upvoteBtn.disabled=true;
+    upvoteBtn.disabled = true;
 
     const upvoteCountEl = upvoteBtn.querySelector(".upvote__count");
     let upvContect = parseInt(upvoteCountEl.textContent);
-    upvoteCountEl.textContent = upvContect++;
+    upvoteCountEl.textContent = ++upvContect;
   }
   else {
     eventLi.closest('.feedback').classList.toggle('feedback--expand');
   }
 }
 
-feedsOl.addEventListener('click', clickHandler);
+feedsOl.addEventListener('click', clickHandlerFBs);
+
+
+const clickHandlerHTs = event => {
+  const eventCase = event.target;
+  const hashtagList = eventCase.className.includes('hashtags');
+  if (hashtagList) return;
+
+  const companyNameOfHashtags = eventCase.textContent.substring(1).toLowerCase();
+  feedsOl.childNodes.forEach(childs => {
+    if (childs.nodeName === '#text') return;
+    const companyNameOfFeedbacks = childs.querySelector('.feedback__company').textContent.toLowerCase();
+    if (companyNameOfHashtags !== companyNameOfFeedbacks) {
+      childs.remove();
+    }
+  })
+}
+
+hashtagUl.addEventListener('click', clickHandlerHTs);
