@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="digiForm.css">
+    <title>digiKala login page</title>
+  </head>
+  <body>
+    <section class="box_form">
+      <form action="">
+        <img src="../../images/full-vertical.svg" alt="دیجی کالا">
+        <div class="data">
+          <label for="names">نام و نام خانوادگی</label><br />
+          <input type="text" id="names" name="names" required autofocus autocomplete="off"/>
+        </div>
+        <div class="data">
+          <label for="email">ایمیل</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            style="text-align: left"
+          />
+        </div>
+        <div class="data">
+          <label for="password">رمز عبور</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            autocapitalize="off"
+          />
+        </div>
+        <div class="data">
+          <label for="birth">تاریخ تولد</label>
+          <input type="date" id="birth"/>
+        </div>
+
+        <input type="checkbox" name="rules" />
+        <input readonly placeholder="شرایط و قوانین را می پذیرم" /><br /><br />
+        <button>تایید</button>
+      </form>
+    </section>
+  </body>
+</html>
